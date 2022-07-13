@@ -1,12 +1,13 @@
-import build_model
+import joblib
 
-def test_build_model():
-    import pandas as pd 
-    from sklearn.linear_model import LinearRegression
-    import joblib
-    X = [205.9991686803,2,0]
-    model = joblib.load("regression.joblib")
-    actual_result = model.predict()
-    assert actgual_result > 0
-    y = df['price']
-    model = LinearRegression()
+def load_model():
+    return joblib.load('regression.joblib')
+
+model = load_model()
+
+X = [[100, 3, 0]]
+prediction = model.predict(X)
+actual_result = prediction
+
+def test_pred():
+    assert 0 < actual_result , "C kc"

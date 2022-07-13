@@ -1,3 +1,4 @@
+
 def build_model():
     import pandas as pd 
     from sklearn.linear_model import LinearRegression
@@ -10,4 +11,5 @@ def build_model():
     joblib.dump(model, "regression.joblib")
     
         
+    
 build_model()
